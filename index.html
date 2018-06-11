@@ -9,11 +9,11 @@
 	<div id="main">
 
 		<div class="nav">
-			<input type="text" placeholder="Enter your serach terms" />
+			<input type="text" v-model="searchString" placeholder="Enter your search terms" />
 		</div>
 
 		<ul>
-			<li v-for="movie in movies">
+			<li v-for="movie in filteredMovies">
 				<a v-bind:href="movie.url"><img v-bind:src="movie.image" /></a>
 				<p>{{ movie.title }}</p>
 			</li>
